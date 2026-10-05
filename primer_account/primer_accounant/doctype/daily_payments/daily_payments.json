@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-10-05 15:19:02.135368",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "mode_of_payment",
+  "amount",
+  "column_break_uvep",
+  "posting_date",
+  "account",
+  "jl_reference",
+  "section_break_ilon",
+  "transaction",
+  "section_break_asgq",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_asgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Payments",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "DP.-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode Of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "column_break_uvep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "link_filters": "[[\"Account\",\"report_type\",\"=\",\"Balance Sheet\"]]",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_ilon",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Table",
+   "label": "Transaction",
+   "options": "Payment Transactions"
+  },
+  {
+   "fieldname": "jl_reference",
+   "fieldtype": "Link",
+   "label": "JL Reference",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "precision": "3"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-05 16:08:12.430654",
+ "modified_by": "Administrator",
+ "module": "Primer Accounant",
+ "name": "Daily Payments",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
